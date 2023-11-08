@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+int main() {
+    setlocale(LC_ALL, "portuguese");
+
+    char codigoAcesso[200];
+    char codigoCorreto[200] = "261305";
+
+    do {
+    printf("Digite o codigo de acesso: ");
+    gets(codigoAcesso);
+    printf("\n");
+
+    if (strcmp(codigoCorreto, codigoAcesso)==0) {
+        printf("Acesso permitido. \n");
+    }else{
+        printf("Acesso negado. Tente novamente \n\n");
+    }
+
+    } while (strcmp(codigoCorreto, codigoAcesso)!=0);
+
+    return 0;
+}

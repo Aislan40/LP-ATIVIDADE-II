@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "portuguese");
+
+    int opcao;
+
+    printf("======= MENU ======= \n");
+    printf("1 - Novo jogo \n");
+    printf("2 - Carregar jogo \n");
+    printf("3 - Configurações \n\n");
+    printf("Digite a opção: ");
+    scanf("%d", &opcao);
+    system("cls || clear");
+
+    switch (opcao) {
+    case 1 :
+        printf("Começando novo jogo ... \n");
+        break;
+    case 2 :
+        printf("Carregando o jogo ... \n");
+        break;
+    case 3 :
+        printf("Configurações: \n\n");
+        printf("Qualidade da imagem \n");
+        printf("Graficos \n");
+        printf("Alterar idioma \n");
+        printf("Volume \n");
+        printf("Voltar \n");
+        break;
+    
+    default:
+    printf("Opção invalida. \n");
+        break;
+    }
+
+    return 0; 
+    }

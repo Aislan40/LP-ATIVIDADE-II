@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+int main() {
+    setlocale(LC_ALL, "portuguese");
+
+    int codigo;
+    char produto[200];
+    float preco;
+
+    printf("======= ARMARIO ======= \n");
+    printf("1 - Camiseta \n");
+    printf("2 - Calça \n");
+    printf("3 - Sapato \n");
+    printf("Escolha o codigo do produto: ");
+    scanf("%d", &codigo);
+
+    switch (codigo) {
+    case 1 :
+        strcpy(produto, "Camiseta \n");
+        preco = 10.00;
+        break;
+    case 2 :
+        strcpy(produto, "Calça \n");
+        preco = 105.00;
+        break;
+    case 3 :
+        strcpy(produto, "Sapato \n");
+        preco = 50.00;
+        break;
+    
+    default:
+    printf("Opção inválida. \n");
+        break;
+    }
+
+    system("cls || clear");
+
+    printf("Produto: %s", produto);
+    printf("Preço: %.2f \n", preco);
+
+    return 0;
+}
